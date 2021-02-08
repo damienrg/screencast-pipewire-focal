@@ -1,0 +1,4 @@
+deb-src http://fr.archive.ubuntu.com/ubuntu/ focal main restricted universe
+deb-src http://fr.archive.ubuntu.com/ubuntu/ focal-security main restricted universe
+deb-src http://fr.archive.ubuntu.com/ubuntu/ focal-updates main restricted universe
+deb-src http://fr.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe

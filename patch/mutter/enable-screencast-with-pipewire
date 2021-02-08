@@ -1,0 +1,37 @@
+--- a/debian/control.in
++++ b/debian/control.in
+@@ -39,7 +39,7 @@ Build-Depends: debhelper-compat (= 12),
+                libnvidia-egl-wayland-dev [linux-any],
+                libpam0g-dev,
+                libpango1.0-dev (>= 1.2.0),
+-               libpipewire-0.2-dev (>= 0.2.2) [linux-any],
++               libpipewire-0.3-dev [linux-any],
+                libsm-dev,
+                libstartup-notification0-dev (>= 0.7),
+                libsystemd-dev (>= 212) [linux-any],
+--- a/debian/control
++++ b/debian/control
+@@ -43,7 +43,7 @@ Build-Depends: debhelper-compat (= 12),
+                libnvidia-egl-wayland-dev [linux-any],
+                libpam0g-dev,
+                libpango1.0-dev (>= 1.2.0),
+-               libpipewire-0.2-dev (>= 0.2.2) [linux-any],
++               libpipewire-0.3-dev [linux-any],
+                libsm-dev,
+                libstartup-notification0-dev (>= 0.7),
+                libsystemd-dev (>= 212) [linux-any],
+--- a/debian/rules
++++ b/debian/rules
+@@ -35,12 +35,8 @@ endif
+ 
+ # pipewire is not in Ubuntu main yet
+ ifeq ($(DEB_HOST_ARCH_OS),linux)
+-ifeq ($(shell dpkg-vendor --query vendor),Ubuntu)
+-	CONFFLAGS += -Dremote_desktop=false
+-else
+ 	CONFFLAGS += -Dremote_desktop=true
+ endif
+-endif
+ 
+ override_dh_auto_configure:
+ 	dh_auto_configure -- \

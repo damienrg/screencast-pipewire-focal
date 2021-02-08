@@ -1,0 +1,11 @@
+--- a/debian/control
++++ b/debian/control
+@@ -2,7 +2,7 @@ Source: libopenaptx
+ Maintainer: Didier Raboud <odyx@debian.org>
+ Section: libs
+ Priority: optional
+-Build-Depends: debhelper-compat (= 13),
++Build-Depends: debhelper-compat (= 12),
+                help2man,
+ Standards-Version: 4.5.0
+ Homepage: https://github.com/pali/libopenaptx

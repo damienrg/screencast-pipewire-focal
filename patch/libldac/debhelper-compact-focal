@@ -1,0 +1,11 @@
+--- a/debian/control
++++ b/debian/control
+@@ -3,7 +3,7 @@ Section: libs
+ Priority: optional
+ Maintainer: Andrej Shadura <andrewsh@debian.org>
+ Build-Depends:
+- debhelper-compat (= 13),
++ debhelper-compat (= 12),
+  mini-soong
+ Standards-Version: 4.5.0
+ Homepage: https://android.googlesource.com/platform/external/libldac

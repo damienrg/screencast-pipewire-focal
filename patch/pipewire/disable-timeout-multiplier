@@ -1,0 +1,10 @@
+--- a/debian/rules
++++ b/debian/rules
+@@ -35,7 +35,6 @@ endif
+ override_dh_auto_test:
+ 	dh_auto_test \
+ 		-- \
+-		--timeout-multiplier $(test_timeout_multiplier) \
+ 		$(NULL)
+ 
+ override_dh_missing:
